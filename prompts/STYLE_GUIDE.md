@@ -100,18 +100,20 @@ Follow this Z-pattern layout (used by the reference poster):
 
 ## Graphic Assets Needed
 
+All generated images should be saved in **`webimages/ui/`**.
+
 | File | Dimensions | Format | Purpose |
 |---|---|---|---|
-| `hero-background` | 1920×1080 | JPG | Hero section full-bleed bg |
-| `wrestlers-confrontation` | 1200×800 | PNG (transparent bg) | About section / feature image |
-| `mystery-challenger-badge` | 600×600 | PNG | Circular badge, about section |
-| `adam-starling-portrait` | 600×900 | PNG | Character card |
-| `jt-staten-portrait` | 600×900 | PNG | Character card |
-| `event-poster-web` | 800×1200 | JPG | Full poster for web |
-| `social-square` | 1080×1080 | JPG | Instagram |
-| `social-wide` | 1200×630 | JPG | Facebook / X / OG image |
-| `logo-badge` | 400×400 | PNG | Nav / favicon source |
-| `ticket-design-bg` | 900×400 | JPG | Ticket card texture |
+| `webimages/ui/hero-background.jpg` | 1920×1080 | JPG | Hero section full-bleed bg |
+| `webimages/ui/wrestlers-confrontation.png` | 1200×800 | PNG (transparent bg) | About section / feature image |
+| `webimages/ui/mystery-challenger-badge.png` | 600×600 | PNG | Circular badge, about section |
+| `webimages/ui/adam-starling-portrait.png` | 600×900 | PNG | Character card |
+| `webimages/ui/jt-staten-portrait.png` | 600×900 | PNG | Character card |
+| `webimages/ui/event-poster-web.jpg` | 800×1200 | JPG | Full poster for web |
+| `webimages/ui/social-square.jpg` | 1080×1080 | JPG | Instagram |
+| `webimages/ui/social-wide.jpg` | 1200×630 | JPG | Facebook / X / OG image |
+| `webimages/ui/logo-badge.png` | 400×400 | PNG | Nav / favicon source |
+| `webimages/ui/ticket-design-bg.jpg` | 900×400 | JPG | Ticket card texture |
 
 ---
 

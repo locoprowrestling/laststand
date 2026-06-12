@@ -65,6 +65,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/event-poster-web.jpg`
 - This is the full poster — the most complex prompt, may require iteration
 - If text renders incorrectly, generate the poster WITHOUT text and overlay text in CSS/design tool
 - The bottom info bar design directly mirrors the reference poster provided by the client

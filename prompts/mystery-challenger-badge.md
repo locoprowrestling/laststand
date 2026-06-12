@@ -47,6 +47,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/mystery-challenger-badge.png`
 - Export as PNG with transparent background
 - Used in `.badge-inner` — currently a 220px circle with CSS gold border
 - If ImageGen includes the circular shape in the illustration itself, the CSS border can be removed

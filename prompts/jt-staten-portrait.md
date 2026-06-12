@@ -52,6 +52,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/jt-staten-portrait.png`
 - Export as PNG — pair facing left to mirror Starling facing right
 - The championship belt is a key visual element — ensure it reads clearly
 - "Cold satisfaction" is the key expression note — he's not angry, he's winning

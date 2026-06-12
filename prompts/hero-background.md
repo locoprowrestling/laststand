@@ -42,6 +42,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/hero-background.jpg`
 - Used as the `background-image` in `.hero-bg` — will be overlaid with dark gradient
 - Keep the center of the image relatively dark so white text is legible
 - The ring should be centered or slightly left-of-center
