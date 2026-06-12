@@ -30,10 +30,9 @@ COLOR PALETTE:
 - Text: White and gold (#f5c518)
 - Border: Lime green inner, gold outer trim
 
-STYLE: Badge/seal design, bold and graphic, comic book illustration aesthetic, 
-hard edges, no soft gradients inside the badge, high contrast, professional and 
-authoritative. Think classic boxing/wrestling promotion crest meets modern 
-streetwear badge.
+STYLE: Simple flat-color badge/seal design with large solid shapes, uniform bold black
+outlines, no gradients, no shading, no glow, no metallic rendering, and minimal linework.
+Screen-printed, high contrast, professional, and authoritative.
 
 Transparent background outside the circular badge.
 No photorealism. No clipart. Bold, clean, iconic.
@@ -42,10 +41,10 @@ No photorealism. No clipart. Bold, clean, iconic.
 ## Negative Prompt
 
 ```
-photorealistic, blurry, complex illustration with many small details that won't 
-read small, blue/purple colors, red as primary color, generic sports logo, 
-shield shape, rectangular, text errors, incorrect spelling, watermark, 
-low quality, soft gradients inside badge
+photorealistic, digital painting, gradient, blended shading, glow, metallic rendering,
+blurry, complex illustration with many small details that won't read small, blue/purple,
+red as primary color, generic sports logo, shield shape, rectangular, text errors,
+incorrect spelling, watermark, low quality
 ```
 
 ## Settings

@@ -29,8 +29,8 @@ All graphics for "The Last Stand at the Lodge" should feel like panels torn from
 | Hero/poster background fill | `#0d1a0d` (near-black forest green) |
 | Mid-section fills | `#111111` to `#1a1a1a` |
 | Card/panel backgrounds | `#1e1e1e` to `#242424` |
-| Spotlight halos | `rgba(213, 168, 48, 0.15)` (gold glow) |
-| Green atmospheric glow | `rgba(109, 191, 45, 0.12)` |
+| Spotlight shapes | `#d4a830` (solid gold shape) |
+| Green shadow shapes | `#1a3d1a` (solid forest green shape) |
 
 ### Forbidden Colors
 
@@ -38,7 +38,7 @@ Do NOT use:
 - Pastels or desaturated mid-tones
 - Blue, purple, or pink
 - Bright orange (reserved for warnings, not brand)
-- Gradients that fade to pure white
+- Gradients of any kind inside generated artwork
 
 ---
 
@@ -70,22 +70,38 @@ Do NOT use:
 ## Illustration Style
 
 ### Core Aesthetic
-**Comic book / pop art wrestling poster** — cel-shaded character illustrations with bold black outlines, inspired by classic WWF/NWA poster art and modern wrestling event graphics.
+**Simple flat-color comic book wrestling poster** — clean shapes, limited colors, and bold black outlines inspired by screen-printed wrestling posters.
+
+### Mandatory Flat-Color Rules
+
+- Use large, unmodulated color shapes.
+- Use one flat base color and, only when needed, one hard-edged shadow shape per form.
+- Use a consistent bold black outline.
+- Do not use gradients, airbrushing, painterly blending, soft shadows, glow effects, rim-light effects, specular rendering, or realistic skin rendering.
+- Do not add halftone, paper grain, distressed texture, or noise unless a specific non-character background prompt explicitly requests it.
+- Faces must remain graphic and recognizable at thumbnail size, with minimal interior linework.
+- The result should look screen printed or inked and filled, not digitally painted.
 
 ### Character Illustration Rules
 
-- **Outlines**: 2–4px bold black outline on all character elements
-- **Shading**: Cel-shaded / flat-color fills with 2–3 tonal bands (no photorealistic rendering)
-- **Highlights**: Strong rim lighting from above and behind; hard-edged specular highlights
+- **Source identity**: JT Staten must start from `webimages/TAS-JT-Staten.png`. The
+  mystery challenger must start from `webimages/TAS-Silhouette.png` and remain
+  featureless. Adam Starling is not depicted because no official portrait is supplied.
+  Never invent or infer a person's appearance from prose.
+- **Outlines**: Uniform 2–4px bold black outline on character silhouettes and major features
+- **Shading**: Flat-color fills with at most one hard-edged shadow shape
+- **Highlights**: No rendered highlights, glow, or rim lighting
 - **Pose**: Dynamic, low-angle hero shots; characters should feel imposing and large
 - **Expression**: Intense, dramatic — scowling, confident, or menacing
-- **Color**: Rich saturated fills — dark skin tones stay warm and saturated, not grey
+- **Color**: Rich saturated flat fills — dark skin tones stay warm and saturated, not grey
+- **Championship continuity**: JT Staten is the only person shown with a championship
+  belt. Never put a belt on the mystery challenger or any other figure.
 
 ### Background Treatment
 
 - **Setting**: Elks Lodge Ballroom (built 1925) — ornate woodwork, mounted elk heads/antlers, brass chandeliers with amber light, dark exposed timber ceiling
-- **Atmosphere**: Smoke machine haze at floor level, dramatic spotlights from above
-- **Color grade**: Deep forest green in shadows, gold-amber where spotlights hit, black voids in corners
+- **Atmosphere**: Smoke and spotlights are represented as simple solid graphic shapes
+- **Color treatment**: Deep forest green shadow shapes, flat gold-amber light shapes, and black negative space
 - **No photography** — all backgrounds should feel illustrated or heavily stylized
 
 ### Poster Composition Pattern
@@ -107,7 +123,7 @@ All generated images should be saved in **`webimages/ui/`**.
 | `webimages/ui/hero-background.jpg` | 1920×1080 | JPG | Hero section full-bleed bg |
 | `webimages/ui/wrestlers-confrontation.png` | 1200×800 | PNG (transparent bg) | About section / feature image |
 | `webimages/ui/mystery-challenger-badge.png` | 600×600 | PNG | Circular badge, about section |
-| `webimages/ui/adam-starling-portrait.png` | 600×900 | PNG | Character card |
+| `webimages/ui/mystery-challenger-portrait.png` | 600×900 | PNG | Character card |
 | `webimages/ui/jt-staten-portrait.png` | 600×900 | PNG | Character card |
 | `webimages/ui/event-poster-web.jpg` | 800×1200 | JPG | Full poster for web |
 | `webimages/ui/social-square.jpg` | 1080×1080 | JPG | Instagram |
@@ -131,8 +147,9 @@ quality: high
 
 Include these in every prompt:
 ```
-comic book illustration style, cel-shaded, bold black outlines, pro wrestling event poster art,
-dramatic lighting, deep green and gold color palette, high contrast, professional wrestling,
+simple flat-color comic book illustration, screen-printed look, large solid color shapes,
+uniform bold black outlines, at most one hard-edged shadow shape, pro wrestling event poster art,
+deep green and gold limited palette, high contrast, professional wrestling,
 Longmont Colorado, Elks Lodge, 2026
 ```
 
@@ -140,9 +157,10 @@ Longmont Colorado, Elks Lodge, 2026
 
 Add to every prompt where supported:
 ```
-photorealistic, blurry, watermark, text errors, stock photo, corporate clipart,
-pastel colors, blue tones, purple, realistic photography, AI artifact faces,
-low quality, pixelated
+photorealistic, digital painting, painterly rendering, gradients, airbrush, soft shadows,
+glow, rim lighting, specular highlights, detailed skin rendering, blurry, watermark,
+text errors, stock photo, corporate clipart, pastel colors, blue tones, purple,
+AI artifact faces, invented wrestler identity, low quality, pixelated
 ```
 
 ---

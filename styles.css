@@ -116,10 +116,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 15% 60%, rgba(26, 61, 26, 0.55) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 45%, rgba(26, 61, 26, 0.45) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 30%, rgba(212, 168, 48, 0.07) 0%, transparent 60%),
-    linear-gradient(180deg, #0a0a0a 0%, #0d1a0d 50%, #0a0a0a 100%);
+    linear-gradient(180deg, rgba(10, 10, 10, 0.25), rgba(10, 10, 10, 0.75)),
+    url("webimages/ui/hero-background.jpg") center / cover no-repeat;
   z-index: 0;
 }
 
@@ -442,24 +440,23 @@ body {
 .badge-inner {
   width: 220px;
   height: 220px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
+  border: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
-  background: rgba(201, 168, 76, 0.04);
+  padding: 0;
+  background: url("webimages/ui/mystery-challenger-badge.png") center / contain no-repeat;
   position: relative;
 }
 
 .badge-inner::before {
-  content: '';
-  position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(201, 168, 76, 0.3);
-  border-radius: 50%;
+  content: none;
+}
+
+.badge-inner > * {
+  display: none;
 }
 
 .badge-eyebrow {
@@ -615,7 +612,10 @@ body {
 }
 
 .ticket-card {
-  background: var(--dark-2);
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.68), rgba(10, 10, 10, 0.68)),
+    url("webimages/ui/ticket-design-bg.jpg") center / cover no-repeat,
+    var(--dark-2);
   border: 1px solid rgba(109, 191, 45, 0.2);
   border-radius: 4px;
   padding: 44px 40px;
@@ -632,7 +632,10 @@ body {
 
 .ticket-card-vip {
   border-color: var(--gold);
-  background: linear-gradient(160deg, var(--dark-2) 0%, rgba(201, 168, 76, 0.05) 100%);
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),
+    url("webimages/ui/ticket-design-bg.jpg") center / cover no-repeat,
+    var(--dark-2);
 }
 
 .ticket-vip-badge {

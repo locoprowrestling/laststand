@@ -8,8 +8,14 @@
 ## ImageGen Prompt
 
 ```
-Wide horizontal format pro wrestling event announcement graphic, 1.91:1 aspect ratio. 
-Comic book illustration style, cel-shaded, bold black outlines.
+INPUT IMAGES REQUIRED FOR PEOPLE: Use `webimages/TAS-JT-Staten.png` and
+`webimages/TAS-Silhouette.png` as the only character sources. Preserve JT exactly,
+keep the silhouette fully anonymous, and do not invent wrestlers. JT is the only
+championship belt holder.
+
+Wide horizontal pro wrestling event announcement graphic, 1.91:1 aspect ratio.
+Simple flat-color comic book style with large solid shapes, uniform bold black outlines,
+minimal linework, and at most one hard-edged shadow shape per form. Screen-printed look.
 
 LAYOUT (left to right):
 
@@ -21,10 +27,8 @@ Left third — Title Block:
 - "★ AT THE LODGE ★" in a gold horizontal ribbon banner beneath
 
 Center third — Main Illustration:
-- Two dramatic wrestling figures facing each other from opposite sides of the 
-  frame, illustrated in comic book style with bold outlines and cel-shaded color
-- Left figure: dark-clad villain (JT Staten) with championship belt, cold expression
-- Right figure: athletic hero (Adam Starling), pointing forward, determined
+- Left: JT Staten matched exactly to his supplied portrait, with the sole belt
+- Right: The supplied mystery silhouette, featureless and anonymous, with no belt
 - Behind them: The ornate interior of the Elks Lodge ballroom — antler mounts 
   visible on wood-paneled walls, brass chandelier, dramatic spotlights, 
   thin smoke haze at ankle level
@@ -40,19 +44,21 @@ Right third — Event Info Block:
 - "DOORS 5PM · BELL 6PM" in small caps
 - "@LOCOPROWRESTLING" in lime green at bottom
 
-Full bleed forest green to black gradient background behind everything.
+Flat forest green and black background shape fields behind everything.
 High contrast, readable at small sizes, punchy and dramatic.
 
-Comic book illustration, cel-shaded, pro wrestling event banner, wide format, 
-deep green and gold color palette.
+Simple flat-color comic book event banner, screen-printed, wide format,
+deep green and gold limited palette. No gradients or rendered lighting.
 ```
 
 ## Negative Prompt
 
 ```
-photorealistic, blurry, pastel, blue/purple tones, text errors, vertical/portrait format, 
-stock photography, generic sports banner, corporate design, soft gradients, 
-low contrast, watermark, low quality
+invented faces, altered JT identity, revealed mystery challenger, extra belts,
+photorealistic, digital painting, gradients, blended shading, glow, rim lighting,
+detailed skin rendering, blur, pastel, blue/purple, text errors, vertical format,
+stock photography, generic sports banner, corporate design, low contrast,
+watermark, low quality
 ```
 
 ## Settings
@@ -69,5 +75,6 @@ quality: high
 - This is the primary `og:image` for link unfurls on Facebook, X, and iMessage
 - Update `index.html` og:image path to `webimages/ui/social-wide.jpg` once generated
 - Also add: `<meta name="twitter:card" content="summary_large_image">`
-- Generate with and without wrestler illustrations for flexibility
+- Generate wrestler versions only from verified `tas-portrait` inputs; a venue-only
+  version may be generated without portrait inputs
 - The right-side info block can be swapped for a QR code pointing to tickets

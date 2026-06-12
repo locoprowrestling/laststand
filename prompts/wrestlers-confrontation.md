@@ -8,26 +8,28 @@
 ## ImageGen Prompt
 
 ```
-Two pro wrestlers facing off in dramatic confrontation, comic book illustration style.
+INPUT IMAGES REQUIRED: Use `webimages/TAS-JT-Staten.png` and
+`webimages/TAS-Silhouette.png` as the only character sources and edit starting points.
+Preserve JT's exact official design and preserve the silhouette's complete anonymity.
+Do not invent another wrestler or reveal the silhouette.
 
-Left figure (the villain, JT Staten): A powerfully built man in his 30s with a shaved head 
-and trimmed beard, wearing dark ring gear with "THE FOUNDATION" lettering on his trunks. 
-He stands with arms crossed and a cold, contemptuous smirk — he's the champion, he knows it. 
-He wears a large ornate championship belt around his waist. Black and dark grey color scheme 
-with gold trim. Positioned slightly forward and dominant.
+Two pro wrestlers facing off in dramatic confrontation in a simple flat-color comic
+book style. Use large solid color shapes, uniform bold black outlines, minimal interior
+linework, and at most one hard-edged shadow shape per form. No digital painting.
 
-Right figure (the hero, Adam Starling): A lean, athletic man in his mid-30s with medium-length 
-dark hair, intense determined expression, wearing dark trunks with star motifs. He points 
-directly at Staten, jaw set, eyes burning — this is his building and he knows it. Slightly 
-lower position, reaching upward toward his opponent.
+Left figure (JT Staten): Match his supplied reference exactly, including arms-crossed
+pose and clothing. Add the single championship belt in the image around his waist.
+Position him slightly forward and dominant.
 
-Background: The interior of the Elks Lodge Ballroom — ornate wood paneling, mounted elk 
-antler trophies, brass chandelier, amber spotlight from above, thin smoke haze at floor 
-level. Deep forest green shadows, dramatic gold-amber lighting.
+Right figure (mystery challenger): Use the supplied silhouette exactly. Keep it as a
+featureless black figure with no face, skin, hair, clothing details, or belt.
 
-Both figures have bold black outlines, cel-shaded comic book coloring, hard-edged highlights, 
-dramatic low-angle perspective. Full-body from roughly the knee up. High contrast. Pro 
-wrestling event poster art. The space between them is charged with tension.
+Background: The Elks Lodge Ballroom reduced to clean flat shapes: wood paneling, mounted
+elk antlers, chandelier, solid amber spotlight shapes, forest green shadow shapes, and
+one flat smoke shape at floor level.
+
+Full-body from roughly the knee up. High contrast. The space between them is charged
+with tension.
 
 No text. No logos. Transparent background preferred on figures.
 ```
@@ -35,9 +37,10 @@ No text. No logos. Transparent background preferred on figures.
 ## Negative Prompt
 
 ```
-photorealistic, blurry, stock wrestling photo, identical figures, goofy expressions, 
-cartoonish humor, pastel colors, blue/purple tones, text, watermark, logos, 
-identical outfits, both figures same size/position, low quality
+invented faces, altered JT identity, revealed challenger, extra championship belts,
+photorealistic, digital painting, gradients, blended shading, soft shadows, glow,
+rim light, detailed skin texture, blur, identical figures, goofy expressions,
+cartoonish humor, pastel colors, blue/purple tones, text, watermark, logos
 ```
 
 ## Settings

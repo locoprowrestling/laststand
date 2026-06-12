@@ -8,14 +8,14 @@
 ## ImageGen Prompt
 
 ```
-Horizontal ticket stub background texture for a professional wrestling event. 
-Vintage ticket art style with modern comic book illustration influence.
+Horizontal ticket stub background for a professional wrestling event.
+Simple flat-color vintage ticket art with comic book influence.
 
 DESIGN ELEMENTS:
 - Overall shape suggestion: Wide horizontal rectangle with serrated/perforated 
   edge pattern on the left side (the tear-off stub edge), suggesting a 
   real event ticket
-- Background base: Very dark charcoal (#1e1e1e) to near-black gradient
+- Background base: Separate flat very-dark charcoal (#1e1e1e) and near-black fields
 - Decorative elements scattered across the surface at low opacity (15–25%):
   * Five-pointed stars in varying sizes
   * Classic halftone dot pattern in one corner
@@ -29,22 +29,22 @@ DESIGN ELEMENTS:
   at approximately 5% opacity
 
 COLOR:
-- Background: #1a1a1a to #0d0d0d gradient
+- Background: separate solid fields of #1a1a1a and #0d0d0d
 - Decorative elements: Gold (#d4a830) at very low opacity
 - Stub edge: Slightly lighter at #242424
 - No bright colors — this is a texture, not a foreground element
 
-STYLE: Vintage concert/event ticket aesthetic, comic book texture influences, 
-classic pro wrestling memorabilia aesthetic. Subtle enough to sit behind text. 
-No visible people, no readable text, no logos.
+STYLE: Screen-printed vintage event ticket with solid shapes, uniform line weight,
+and no gradients, blended shading, glow, or rendered dimensional lighting. Subtle
+enough to sit behind text. No people, no wrestlers, no readable text, no logos.
 ```
 
 ## Negative Prompt
 
 ```
-bright colors, photorealistic, people, clear readable text, logos, 
-highly detailed illustration, blue/purple, stock ticket design, 
-low quality, blurry, modern minimalist, completely flat/no texture
+bright colors, photorealistic, digital painting, gradients, blended shading, glow,
+people, wrestlers, clear readable text, logos, highly detailed illustration,
+blue/purple, stock ticket design, low quality, blurry, modern minimalist
 ```
 
 ## Settings

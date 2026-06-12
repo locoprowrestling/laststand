@@ -12,29 +12,27 @@ A circular pro wrestling championship badge design, ornate and prestigious. The 
 is thick, metallic gold with intricate rope-twist border detail and small five-pointed stars 
 spaced evenly around the circumference. Inside the gold border is a deep black background.
 
-Centered in the badge is a dramatic silhouette of a wrestler — a muscular figure standing 
-tall with arms slightly raised, rendered entirely as a flat black shadow with a hard gold 
-backlight rim. The silhouette has a large "?" overlaid in bold Bebas Neue-style display font, 
-gold-colored, centered over the chest of the silhouette.
+Centered in the badge is a large gold question mark over an empty flat-black circular
+field. Do not depict, silhouette, imply, or invent a wrestler. The mystery is represented
+only by the question mark and negative space.
 
-Below the silhouette, small text reads "CITY OF LIGHTS" in wide-tracked gold capital letters.
+Below the question mark, small text reads "CITY OF LIGHTS" in wide-tracked gold capital letters.
 Below that: "AUG 30 · 2026" in smaller gold text.
 
-The badge has a subtle radial gold glow emanating from the center, fading to black at the 
-edges. The overall feel is championship prestige meets mysterious suspense — who defends 
-the title?
+Use simple flat colors only: solid black field, solid gold border, solid green accent
+shapes. No radial glow, gradient, metallic rendering, or dimensional lighting.
 
-Comic book illustration style, cel-shaded metallic gold, bold black outlines, pro wrestling 
-championship belt art aesthetic, deep green and gold color palette, high contrast, circular 
-badge design with transparent background.
+Simple flat-color comic book badge, uniform bold black outlines, screen-printed look,
+deep green and gold limited palette, high contrast, circular design with transparent
+background. Do not include a championship belt.
 ```
 
 ## Negative Prompt
 
 ```
-photorealistic, blurry, square crop, rectangular shape, text errors, 
-incorrect spelling, modern minimalist, flat design without detail, 
-silver colors, blue tones, pink, low quality, watermark
+wrestler, person, human silhouette, championship belt, photorealistic, digital painting,
+gradient, glow, metallic rendering, soft shadow, blurry, square badge shape, text errors,
+incorrect spelling, silver, blue, pink, low quality, watermark
 ```
 
 ## Settings
