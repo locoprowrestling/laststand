@@ -704,7 +704,7 @@ body {
 }
 
 .ticket-perks li::before {
-  content: '—';
+  content: '-';
   color: var(--gold);
   flex-shrink: 0;
   font-size: 0.75rem;
