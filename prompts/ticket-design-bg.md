@@ -57,8 +57,9 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/ticket-design-bg.jpg`
 - Used as `background-image` on `.ticket-card` elements
-- Apply in CSS with: `background-image: url('../images/ticket-design-bg.jpg'); background-size: cover;`
+- Apply in CSS with: `background-image: url('webimages/ui/ticket-design-bg.jpg'); background-size: cover;`
 - Keep the CSS `background` color as a fallback for when image hasn't loaded
 - The texture should be subtle — existing ticket text/pricing must remain readable
 - Apply a dark overlay on top: `background-color: rgba(10,10,10,0.6)` before the text layers

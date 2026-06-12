@@ -61,6 +61,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/social-square.jpg`
 - Also usable as the OpenGraph `og:image` fallback (with minor text adjustments)
 - Generate 2–3 variants: one with two wrestler silhouettes, one with venue focus, 
   one pure typographic/title-card style

@@ -50,6 +50,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/wrestlers-confrontation.png`
 - Can be used as a wide feature image between sections
 - Alternatively crop to portrait for individual wrestler cards
 - The venue background reinforces the setting without needing text

@@ -51,6 +51,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/adam-starling-portrait.png`
 - Export as PNG with transparent or near-transparent background
 - Pair with `jt-staten-portrait.png` for a facing wrestler display
 - Can be used at ~300px width in a two-column about section layout

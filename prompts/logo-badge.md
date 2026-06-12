@@ -58,6 +58,7 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/logo-badge.png`
 - Export as PNG with transparent background
 - Primary use: navigation bar brand mark, replacing current text-only "LoCo Pro Wrestling"
 - Resize to 40px height for nav, 200px for footer, 32px for favicon

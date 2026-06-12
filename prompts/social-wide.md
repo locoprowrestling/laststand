@@ -65,8 +65,9 @@ quality: high
 
 ## Usage Notes
 
+- **Save to**: `webimages/ui/social-wide.jpg`
 - This is the primary `og:image` for link unfurls on Facebook, X, and iMessage
-- Add to `index.html`: `<meta property="og:image" content="images/social-wide.jpg">`
+- Update `index.html` og:image path to `webimages/ui/social-wide.jpg` once generated
 - Also add: `<meta name="twitter:card" content="summary_large_image">`
 - Generate with and without wrestler illustrations for flexibility
 - The right-side info block can be swapped for a QR code pointing to tickets
