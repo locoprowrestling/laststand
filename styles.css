@@ -8,14 +8,17 @@
 }
 
 :root {
-  --gold: #c9a84c;
-  --gold-light: #e8c96a;
+  --gold: #d4a830;
+  --gold-light: #f0c040;
+  --gold-bright: #f5c518;
+  --green: #6dbf2d;
+  --green-dark: #1a3d1a;
   --red: #c0392b;
   --red-dark: #96281b;
   --black: #0a0a0a;
-  --dark: #111111;
-  --dark-2: #1a1a1a;
-  --dark-3: #242424;
+  --dark: #0e1a0e;
+  --dark-2: #141f14;
+  --dark-3: #1e2a1e;
   --white: #f5f0e8;
   --white-dim: rgba(245, 240, 232, 0.75);
   --font-display: 'Bebas Neue', sans-serif;
@@ -51,9 +54,9 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 10, 10, 0.92);
+  background: rgba(10, 10, 10, 0.94);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  border-bottom: 1px solid rgba(109, 191, 45, 0.25);
 }
 
 .nav-inner {
@@ -72,7 +75,7 @@ body {
   font-size: 1.1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
 }
 
 .nav-cta {
@@ -113,9 +116,10 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 40%, rgba(201, 168, 76, 0.08) 0%, transparent 65%),
-    radial-gradient(ellipse at 80% 80%, rgba(192, 57, 43, 0.06) 0%, transparent 50%),
-    linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+    radial-gradient(ellipse at 15% 60%, rgba(26, 61, 26, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 45%, rgba(26, 61, 26, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 30%, rgba(212, 168, 48, 0.07) 0%, transparent 60%),
+    linear-gradient(180deg, #0a0a0a 0%, #0d1a0d 50%, #0a0a0a 100%);
   z-index: 0;
 }
 
@@ -152,6 +156,18 @@ body {
   opacity: 0.9;
 }
 
+.hero-brand {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.hero-eyebrow-sep {
+  color: var(--green);
+  opacity: 0.7;
+  margin: 0 4px;
+  letter-spacing: 0;
+}
+
 .hero-title {
   display: flex;
   flex-direction: column;
@@ -176,8 +192,9 @@ body {
   color: var(--white);
   line-height: 0.9;
   text-shadow:
-    0 0 80px rgba(201, 168, 76, 0.25),
-    0 2px 4px rgba(0,0,0,0.8);
+    0 0 80px rgba(109, 191, 45, 0.15),
+    0 0 40px rgba(212, 168, 48, 0.2),
+    0 2px 6px rgba(0,0,0,0.9);
 }
 
 .title-at {
@@ -195,11 +212,11 @@ body {
   font-size: clamp(3rem, 10vw, 7.5rem);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-bright);
   line-height: 1;
   text-shadow:
-    0 0 60px rgba(201, 168, 76, 0.4),
-    0 2px 4px rgba(0,0,0,0.8);
+    0 0 60px rgba(245, 197, 24, 0.5),
+    0 2px 6px rgba(0,0,0,0.9);
 }
 
 .hero-divider {
@@ -299,9 +316,9 @@ body {
    COUNTDOWN
    ============================== */
 .countdown-section {
-  background: var(--dark-2);
-  border-top: 1px solid rgba(201, 168, 76, 0.15);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  background: linear-gradient(180deg, var(--dark) 0%, var(--dark-2) 50%, var(--dark) 100%);
+  border-top: 1px solid rgba(109, 191, 45, 0.25);
+  border-bottom: 1px solid rgba(109, 191, 45, 0.25);
   padding: 48px 24px;
   text-align: center;
 }
@@ -353,8 +370,8 @@ body {
 .cd-colon {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4rem);
-  color: var(--gold);
-  opacity: 0.5;
+  color: var(--green);
+  opacity: 0.6;
   padding-bottom: 20px;
   align-self: flex-start;
   margin-top: 8px;
@@ -515,7 +532,7 @@ body {
 
 .venue-card {
   background: var(--dark-3);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(109, 191, 45, 0.2);
   border-radius: 4px;
   padding: 36px 28px;
   text-align: center;
@@ -523,7 +540,7 @@ body {
 }
 
 .venue-card:hover {
-  border-color: rgba(201, 168, 76, 0.4);
+  border-color: rgba(109, 191, 45, 0.5);
   transform: translateY(-4px);
 }
 
@@ -575,7 +592,7 @@ body {
   transform: translateX(-50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(192, 57, 43, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(109, 191, 45, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -599,7 +616,7 @@ body {
 
 .ticket-card {
   background: var(--dark-2);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  border: 1px solid rgba(109, 191, 45, 0.2);
   border-radius: 4px;
   padding: 44px 40px;
   width: 280px;
@@ -610,7 +627,7 @@ body {
 
 .ticket-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(201, 168, 76, 0.4);
+  border-color: rgba(109, 191, 45, 0.5);
 }
 
 .ticket-card-vip {
@@ -705,12 +722,12 @@ body {
 
 .ticket-btn-ga {
   background: transparent;
-  color: var(--gold);
-  border: 1px solid var(--gold);
+  color: var(--green);
+  border: 1px solid var(--green);
 }
 
 .ticket-btn-ga:hover {
-  background: rgba(201, 168, 76, 0.1);
+  background: rgba(109, 191, 45, 0.12);
   transform: translateY(-1px);
 }
 
@@ -729,7 +746,7 @@ body {
    ============================== */
 .footer {
   background: var(--black);
-  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  border-top: 1px solid rgba(109, 191, 45, 0.2);
   padding: 60px 24px 40px;
   text-align: center;
 }
@@ -740,7 +757,7 @@ body {
   font-size: 1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   margin-bottom: 8px;
 }
 
