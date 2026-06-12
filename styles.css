@@ -437,67 +437,11 @@ body {
   flex-shrink: 0;
 }
 
-.badge-inner {
+.badge-image {
+  display: block;
   width: 220px;
   height: 220px;
-  border: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-  background: url("webimages/ui/mystery-challenger-badge.png") center / contain no-repeat;
-  position: relative;
-}
-
-.badge-inner::before {
-  content: none;
-}
-
-.badge-inner > * {
-  display: none;
-}
-
-.badge-eyebrow {
-  font-family: var(--font-heading);
-  font-weight: 300;
-  font-size: 0.55rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.badge-num {
-  font-family: var(--font-display);
-  font-size: 3.5rem;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-}
-
-.badge-name {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--white);
-  display: block;
-  line-height: 1.3;
-  margin-top: 4px;
-}
-
-.badge-date {
-  font-family: var(--font-heading);
-  font-weight: 300;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  display: block;
-  margin-top: 8px;
+  object-fit: contain;
 }
 
 /* ==============================
@@ -607,7 +551,7 @@ body {
   gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 700px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
