@@ -8,14 +8,15 @@
 ## ImageGen Prompt
 
 ```
-INPUT IMAGES REQUIRED FOR PEOPLE: Use `webimages/TAS-JT-Staten.png` and
-`webimages/TAS-Silhouette.png` as the only character sources. Preserve JT exactly,
-keep the silhouette fully anonymous, and do not invent wrestlers. JT is the only
-championship belt holder.
+INPUT IMAGES REQUIRED FOR PEOPLE: Use `webimages/TAS-JT-Staten.png`,
+`webimages/TITLE-BELT.png`, `webimages/TAS-Silhouette.png`, and
+`webimages/Last-Stand-Poster.png`. Preserve JT exactly, keep the silhouette fully
+anonymous, and match the poster's character rendering. JT is the only belt holder.
 
 Wide horizontal pro wrestling event announcement graphic, 1.91:1 aspect ratio.
-Simple flat-color comic book style with large solid shapes, uniform bold black outlines,
-minimal linework, and at most one hard-edged shadow shape per form. Screen-printed look.
+Use the poster's heavy variable black ink lines, angular anatomy, two or three hard
+cel-shading bands, selective hatch/stipple texture, dramatic cropped figures, and
+saturated green/purple/gold print palette.
 
 LAYOUT (left to right):
 
@@ -29,9 +30,7 @@ Left third — Title Block:
 Center third — Main Illustration:
 - Left: JT Staten matched exactly to his supplied portrait, with the sole belt
 - Right: The supplied mystery silhouette, featureless and anonymous, with no belt
-- Behind them: The ornate interior of the Elks Lodge ballroom — antler mounts 
-  visible on wood-paneled walls, brass chandelier, dramatic spotlights, 
-  thin smoke haze at ankle level
+- Behind them: The real ballroom architecture from `webimages/Elks-Lodge-Ballroom.jpeg`
 
 Right third — Event Info Block:
 - Gold panel or dark panel with gold text
@@ -47,16 +46,17 @@ Right third — Event Info Block:
 Flat forest green and black background shape fields behind everything.
 High contrast, readable at small sizes, punchy and dramatic.
 
-Simple flat-color comic book event banner, screen-printed, wide format,
-deep green and gold limited palette. No gradients or rendered lighting.
+High-impact inked wrestling comic event banner matching the supplied poster, wide
+format, saturated green, purple, gold, cream, and black. No smooth gradients.
 ```
 
 ## Negative Prompt
 
 ```
-invented faces, altered JT identity, revealed mystery challenger, extra belts,
+clean mascot vector style, uniform outlines, simplified faces, invented faces, altered
+JT identity, revealed mystery challenger, extra belts,
 photorealistic, digital painting, gradients, blended shading, glow, rim lighting,
-detailed skin rendering, blur, pastel, blue/purple, text errors, vertical format,
+detailed skin rendering, blur, pastel, blue-dominant palette, text errors, vertical format,
 stock photography, generic sports banner, corporate design, low contrast,
 watermark, low quality
 ```

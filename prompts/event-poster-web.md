@@ -8,15 +8,22 @@
 ## ImageGen Prompt
 
 ```
-INPUT IMAGES REQUIRED: Use `webimages/TAS-JT-Staten.png` and
-`webimages/TAS-Silhouette.png` as the only character sources. Preserve JT's exact
-official design and the silhouette's complete anonymity. Do not depict Adam Starling,
-the authority figure, or any other person without an official supplied portrait.
+INPUT IMAGES REQUIRED:
+- Use `webimages/Last-Stand-Poster.png` as the mandatory overall poster and character
+  style reference.
+- Use `webimages/TAS-JT-Staten.png` for JT's identity.
+- Use `webimages/TITLE-BELT.png` for JT's belt.
+- Use `webimages/TAS-Silhouette.png` for the mystery figure.
+- Use `webimages/Elks-Lodge-Ballroom.jpeg` for venue architecture.
+
+Preserve JT's exact identity and the silhouette's complete anonymity. Do not depict
+another person without an official supplied portrait.
 
 Professional wrestling event poster for "THE LAST STAND AT THE LODGE" — a LoCo Pro
-Wrestling event. Simple flat-color comic book illustration with large solid shapes,
-uniform bold black outlines, minimal interior linework, and at most one hard-edged
-shadow shape per form. Screen-printed poster look, not digital painting.
+Wrestling event. Match the supplied poster's dense inked comic art: variable heavy black
+contours, angular anatomy, two or three hard cel-shading bands, warm skin shadows,
+selective hatch/stipple texture, dramatic cropped figures, saturated green and purple
+radial comic fields, and high-contrast print finish.
 
 LAYOUT (top to bottom):
 
@@ -31,9 +38,7 @@ TOP SECTION — Deep forest green background (#1a3d1a), 25% of poster height:
 MIDDLE SECTION — The main illustration, 45% of poster height:
 - Left side: JT Staten matched exactly to `TAS-JT-Staten.png`, including his clothing
   and arms-crossed pose, with the only championship belt in the poster
-- Center background: Interior of the Elks Lodge Ballroom — ornate woodwork, mounted 
-  elk antler trophy visible on wall, brass chandelier, dramatic spotlights, 
-  "ELKS LODGE · LONGMONT, CO" visible as a sign
+- Center background: The real Elks Lodge Ballroom architecture from its reference image
 - Right side: The supplied `TAS-Silhouette.png`, preserved as a featureless anonymous
   challenger with a large gold question mark nearby and no championship belt
 
@@ -45,17 +50,18 @@ BOTTOM SECTION — Flat info bar, 30% of poster height, gold and black blocks:
 - Right block (gold background, black text): "DOORS 5:00PM" and "BELL TIME 6:00PM"
 - Very bottom strip: "LIVE PRO WRESTLING IN LONGMONT!" in small black text on gold
 
-No other person may appear. Flat forest green, black, warm white, and gold palette only.
-No gradients, glow, rendered lighting, painterly texture, or photoreal detail.
+No other person may appear. Preserve the poster's green, purple, gold, cream, black, and
+warm skin palette. No smooth gradients, painterly rendering, or photoreal detail.
 ```
 
 ## Negative Prompt
 
 ```
-invented wrestler identity, altered JT face or clothing, revealed challenger, extra
+clean mascot vector style, uniform outlines, simplified cartoon faces, invented wrestler
+identity, altered JT face or clothing, revealed challenger, extra
 championship belts, photorealistic, digital painting, gradients,
 blended shading, glow, rim lighting, detailed skin rendering, blur, stock photos,
-text spelling errors, clipart, corporate design, pastel colors, blue/purple,
+text spelling errors, clipart, corporate design, pastel colors, blue-dominant palette,
 modern minimalist, incomplete layout, missing text elements, watermark
 ```
 

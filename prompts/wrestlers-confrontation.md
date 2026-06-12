@@ -8,14 +8,18 @@
 ## ImageGen Prompt
 
 ```
-INPUT IMAGES REQUIRED: Use `webimages/TAS-JT-Staten.png` and
-`webimages/TAS-Silhouette.png` as the only character sources and edit starting points.
+INPUT IMAGES REQUIRED: Use `webimages/TAS-JT-Staten.png`,
+`webimages/TITLE-BELT.png`, `webimages/TAS-Silhouette.png`, and
+`webimages/Last-Stand-Poster.png`.
 Preserve JT's exact official design and preserve the silhouette's complete anonymity.
-Do not invent another wrestler or reveal the silhouette.
+The Last Stand poster controls the rendering style, line weight, shading, texture,
+character scale, and fight-poster composition. Do not invent another wrestler or reveal
+the silhouette.
 
-Two pro wrestlers facing off in dramatic confrontation in a simple flat-color comic
-book style. Use large solid color shapes, uniform bold black outlines, minimal interior
-linework, and at most one hard-edged shadow shape per form. No digital painting.
+Render the figures with the poster's heavy variable black ink, angular anatomy, sharp
+facial planes, two or three hard cel-shading bands, sparse hatch/stipple texture, and
+aggressive cropped composition. Avoid the cleaner mascot/vector appearance of the raw
+TAS source.
 
 Left figure (JT Staten): Match his supplied reference exactly, including arms-crossed
 pose and clothing. Add the single championship belt in the image around his waist.
@@ -24,9 +28,8 @@ Position him slightly forward and dominant.
 Right figure (mystery challenger): Use the supplied silhouette exactly. Keep it as a
 featureless black figure with no face, skin, hair, clothing details, or belt.
 
-Background: The Elks Lodge Ballroom reduced to clean flat shapes: wood paneling, mounted
-elk antlers, chandelier, solid amber spotlight shapes, forest green shadow shapes, and
-one flat smoke shape at floor level.
+Background: Use `webimages/Elks-Lodge-Ballroom.jpeg` for the real architecture, reduced
+to the same inked comic treatment as the poster.
 
 Full-body from roughly the knee up. High contrast. The space between them is charged
 with tension.
@@ -37,10 +40,11 @@ No text. No logos. Transparent background preferred on figures.
 ## Negative Prompt
 
 ```
-invented faces, altered JT identity, revealed challenger, extra championship belts,
+mascot vector style, uniform thin outlines, smooth plastic shading, invented faces,
+altered JT identity, revealed challenger, extra championship belts,
 photorealistic, digital painting, gradients, blended shading, soft shadows, glow,
 rim light, detailed skin texture, blur, identical figures, goofy expressions,
-cartoonish humor, pastel colors, blue/purple tones, text, watermark, logos
+cartoonish humor, pastel colors, blue-dominant palette, text, watermark, logos
 ```
 
 ## Settings

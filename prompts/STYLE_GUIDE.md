@@ -36,7 +36,9 @@ All graphics for "The Last Stand at the Lodge" should feel like panels torn from
 
 Do NOT use:
 - Pastels or desaturated mid-tones
-- Blue, purple, or pink
+- Blue or pink as dominant colors
+- Purple outside the saturated deep-purple treatment established by
+  `webimages/Last-Stand-Poster.png` and `webimages/TITLE-BELT.png`
 - Bright orange (reserved for warnings, not brand)
 - Gradients of any kind inside generated artwork
 
@@ -70,17 +72,25 @@ Do NOT use:
 ## Illustration Style
 
 ### Core Aesthetic
-**Simple flat-color comic book wrestling poster** — clean shapes, limited colors, and bold black outlines inspired by screen-printed wrestling posters.
+**High-impact inked wrestling comic art matching `webimages/Last-Stand-Poster.png`** —
+bold variable black linework, angular anatomy, hard cel shading, saturated color fields,
+and controlled print texture. The poster is the mandatory style reference for every
+character illustration.
 
-### Mandatory Flat-Color Rules
+### Mandatory Comic Rendering Rules
 
-- Use large, unmodulated color shapes.
-- Use one flat base color and, only when needed, one hard-edged shadow shape per form.
-- Use a consistent bold black outline.
-- Do not use gradients, airbrushing, painterly blending, soft shadows, glow effects, rim-light effects, specular rendering, or realistic skin rendering.
-- Do not add halftone, paper grain, distressed texture, or noise unless a specific non-character background prompt explicitly requests it.
-- Faces must remain graphic and recognizable at thumbnail size, with minimal interior linework.
-- The result should look screen printed or inked and filled, not digitally painted.
+- Match the linework and rendering in `webimages/Last-Stand-Poster.png`.
+- Use heavy, variable-width black contour lines: thick around the silhouette and major
+  overlaps, thinner around facial features, fingers, clothing folds, and belt details.
+- Use a flat base color plus two or three hard-edged cel-shading bands. No smooth tonal
+  transitions.
+- Build faces from sharp graphic planes: strong brow, nose, cheek, jaw, and neck shadows.
+- Use selective short black hatch marks, ink scratches, and sparse stipple specks on skin,
+  hair, and clothing. Keep texture controlled rather than noisy.
+- Use small, hard warm highlights only where the poster style uses them.
+- Preserve clean separation between shapes and strong readability at thumbnail size.
+- Do not use gradients, airbrushing, painterly blending, soft shadows, photographic skin,
+  glossy 3D rendering, or mascot/vector simplification.
 
 ### Character Illustration Rules
 
@@ -88,18 +98,24 @@ Do NOT use:
   mystery challenger must start from `webimages/TAS-Silhouette.png` and remain
   featureless. Adam Starling is not depicted because no official portrait is supplied.
   Never invent or infer a person's appearance from prose.
-- **Outlines**: Uniform 2–4px bold black outline on character silhouettes and major features
-- **Shading**: Flat-color fills with at most one hard-edged shadow shape
-- **Highlights**: No rendered highlights, glow, or rim lighting
-- **Pose**: Dynamic, low-angle hero shots; characters should feel imposing and large
-- **Expression**: Intense, dramatic — scowling, confident, or menacing
-- **Color**: Rich saturated flat fills — dark skin tones stay warm and saturated, not grey
+- **Style reference**: `webimages/Last-Stand-Poster.png` controls line weight, anatomy,
+  facial construction, shading density, texture, pose energy, and overall finish.
+- **Identity vs. style**: TAS images control who the character is; the poster controls
+  how the character is drawn. Never copy another poster character's face onto JT.
+- **Outlines**: Variable heavy black ink outlines, not uniform vector strokes
+- **Shading**: Two or three hard-edged cel-shading bands with angular shadow shapes
+- **Texture**: Sparse ink hatch, scratch, and stipple marks matching the poster
+- **Pose**: Tight, dynamic fight-poster crops with large shoulders, foreshortened fists,
+  strong diagonals, and overlapping frame edges when appropriate
+- **Expression**: Intense and specific; JT remains cold and confident rather than generic
+- **Color**: Warm saturated skin, deep black clothing shadows, cream highlights, and
+  poster-matched green, purple, gold, and black accents
 - **Championship continuity**: JT Staten is the only person shown with a championship
   belt. Never put a belt on the mystery challenger or any other figure.
 
 ### Background Treatment
 
-- **Setting**: Elks Lodge Ballroom (built 1925) — ornate woodwork, mounted elk heads/antlers, brass chandeliers with amber light, dark exposed timber ceiling
+- **Setting**: Use `webimages/Elks-Lodge-Ballroom.jpeg` for the real room architecture
 - **Atmosphere**: Smoke and spotlights are represented as simple solid graphic shapes
 - **Color treatment**: Deep forest green shadow shapes, flat gold-amber light shapes, and black negative space
 - **No photography** — all backgrounds should feel illustrated or heavily stylized
@@ -147,9 +163,10 @@ quality: high
 
 Include these in every prompt:
 ```
-simple flat-color comic book illustration, screen-printed look, large solid color shapes,
-uniform bold black outlines, at most one hard-edged shadow shape, pro wrestling event poster art,
-deep green and gold limited palette, high contrast, professional wrestling,
+inked wrestling comic art matching webimages/Last-Stand-Poster.png, variable heavy black
+linework, angular anatomy, two or three hard cel-shading bands, sparse ink hatch and
+stipple texture, saturated green purple gold and black palette, high contrast,
+professional wrestling event poster art,
 Longmont Colorado, Elks Lodge, 2026
 ```
 
@@ -158,8 +175,8 @@ Longmont Colorado, Elks Lodge, 2026
 Add to every prompt where supported:
 ```
 photorealistic, digital painting, painterly rendering, gradients, airbrush, soft shadows,
-glow, rim lighting, specular highlights, detailed skin rendering, blurry, watermark,
-text errors, stock photo, corporate clipart, pastel colors, blue tones, purple,
+glossy 3D rendering, smooth vector mascot art, uniform thin outlines, chibi proportions,
+blurry, watermark, text errors, stock photo, corporate clipart, pastel colors, blue tones,
 AI artifact faces, invented wrestler identity, low quality, pixelated
 ```
 

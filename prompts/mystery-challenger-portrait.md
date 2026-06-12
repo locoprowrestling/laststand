@@ -8,31 +8,37 @@
 ## ImageGen Prompt
 
 ```
-INPUT IMAGE REQUIRED: Use `webimages/TAS-Silhouette.png` as the sole wrestler source
-and edit starting point. Preserve its exact pose, proportions, outline, and anonymity.
+INPUT IMAGES REQUIRED:
+- Image 1: `webimages/TAS-Silhouette.png` is the sole figure source. Preserve its pose,
+  proportions, outline, and anonymity.
+- Image 2: `webimages/Last-Stand-Poster.png` is the mandatory rendering and composition
+  reference for the silhouette treatment.
+
 Do not reveal, invent, or imply a face, hair, skin tone, gear details, or identity.
 
-Create a simple flat-color comic book portrait of the mystery challenger based directly
-on the supplied silhouette. Use large solid black and deep-green shapes, a uniform bold
-black outline, and one optional solid gold edge shape. The result should look screen
-printed or inked and filled, not digitally painted.
+Match the poster's foreground mystery figure: a dense near-black silhouette with a thick,
+slightly irregular warm-white outer contour, subtle hard-edged charcoal-black interior
+separation only where necessary for readability, and a large warm-white question mark
+centered on the torso. Use the poster's bold cropped foreground scale and heavy inked
+presence. Do not add visible anatomy, facial features, clothing, or identity clues.
 
 Pose: Preserve the supplied silhouette pose. Do not redraw it into a new person.
 
-Background: Two or three simple flat shapes suggesting a deep forest green historic
-ballroom and a solid gold spotlight shape. No blur, gradient, haze rendering, or glow.
+Background: Transparent outside the silhouette.
 
-Full figure or upper-body crop from the supplied silhouette. No championship belt.
-JT Staten is the only belt holder. No text. No logos.
+Use the same waist-up or three-quarter foreground crop as the poster when appropriate.
+No championship belt. JT Staten is the only belt holder. The question mark is the only
+allowed text-like symbol.
 ```
 
 ## Negative Prompt
 
 ```
-revealed face, invented identity, facial features, skin rendering, gear details,
+gold outline, green edge highlight, clean mascot silhouette, revealed face, invented
+identity, facial features, skin rendering, gear details,
 championship belt, photorealistic, digital painting, gradients, blended shading,
 soft shadows, glow, rim light, blur, altered pose, extra limbs, watercolor, pastel
-colors, blue/purple background, text, watermark
+colors, blue background, unrelated text, watermark
 ```
 
 ## Settings
@@ -50,3 +56,4 @@ quality: high
 - Pair with `jt-staten-portrait.png`
 - Can be used at ~300px width in a two-column about section layout
 - The identity must remain completely hidden
+- Match the white-outlined mystery figure in `webimages/Last-Stand-Poster.png`

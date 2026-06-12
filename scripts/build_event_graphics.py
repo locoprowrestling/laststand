@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,18 +61,6 @@ def contain_alpha(image, size):
         image, ((size[0] - image.width) // 2, (size[1] - image.height) // 2)
     )
     return canvas
-
-
-def outline_mystery(image):
-    image = crop_alpha(image)
-    alpha = image.getchannel("A")
-    expanded = alpha.filter(ImageFilter.MaxFilter(31))
-    outline = Image.new("RGBA", image.size, BRIGHT_GOLD)
-    outline.putalpha(expanded)
-    silhouette = Image.new("RGBA", image.size, BLACK)
-    silhouette.putalpha(alpha)
-    outline.alpha_composite(silhouette)
-    return outline
 
 
 def cover(image, size):
@@ -150,7 +138,6 @@ def build_poster(hero, jt, mystery):
     canvas.alpha_composite(mystery_layer, (465, 315))
 
     draw = ImageDraw.Draw(canvas)
-    centered(draw, (615, 570), "?", font(DISPLAY_FONT, 150), BRIGHT_GOLD, 4)
     draw.rectangle((0, 900, 800, 1200), fill=BLACK)
     draw.rectangle((0, 900, 235, 1200), fill=GOLD)
     draw.rectangle((565, 900, 800, 1200), fill=GOLD)
@@ -228,9 +215,7 @@ def main():
     UI.mkdir(parents=True, exist_ok=True)
     hero = Image.open(UI / "hero-background.jpg")
     jt = Image.open(UI / "jt-staten-portrait.png").convert("RGBA")
-    mystery = outline_mystery(
-        Image.open(WEBIMAGES / "TAS-Silhouette.png").convert("RGBA")
-    )
+    mystery = Image.open(UI / "mystery-challenger-portrait.png").convert("RGBA")
     build_portraits(jt, mystery)
     build_confrontation(hero, jt, mystery)
     build_poster(hero, jt, mystery)

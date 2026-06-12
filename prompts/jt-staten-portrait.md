@@ -12,16 +12,24 @@ INPUT IMAGES REQUIRED:
 - Image 1: `webimages/TAS-JT-Staten.png` is the sole identity, pose, body, and clothing
   reference for JT Staten.
 - Image 2: `webimages/TITLE-BELT.png` is the sole championship belt design reference.
+- Image 3: `webimages/Last-Stand-Poster.png` is the mandatory rendering and art-direction
+  reference. Match its character linework, anatomy, facial planes, cel shading, texture,
+  and dramatic poster finish.
 
 Preserve JT's exact face, hair, skin tone, build, proportions, confident expression,
 arms-crossed pose, white rolled-sleeve shirt, dark vest, dark pants, boots, watch, and
 distinguishing features from Image 1. Do not invent, average, beautify, replace, or turn
 him into a different wrestler.
 
-Create a simple flat-color comic book portrait of JT Staten based directly on the
-reference. Use large solid color shapes, a uniform bold black outline, minimal facial
-linework, and at most one hard-edged shadow shape per form. The result should look
-screen printed or inked and filled, not digitally painted.
+Redraw JT in the exact character-art language of Image 3 without changing his identity:
+- Heavy variable-width black ink contours
+- Angular jaw, brow, cheek, nose, neck, hand, and clothing shadow shapes
+- Two or three hard-edged cel-shading bands, never smooth shading
+- Warm saturated skin base with deeper amber-brown shadow planes
+- Sparse short ink hatches, scratches, and stipple specks matching the poster
+- Strong black clothing masses with sharp charcoal highlight shapes
+- More anatomical definition and dramatic weight than the clean TAS mascot source
+- Crisp high-contrast finish that looks printed and inked, not vector-flat
 
 Clothing: Preserve the white shirt, dark vest, dark pants, boots, watch, and overall
 presentation from Image 1.
@@ -39,10 +47,13 @@ BELT DESIGN AND PLACEMENT:
 - Do not recolor it black, simplify it into an oval generic belt, replace its plate
   silhouette, omit the purple strap, or create a different championship
 
-Pose: Preserve the arms-crossed pose and confident expression from Image 1.
+Pose: Preserve the arms-crossed pose and confident expression from Image 1, but frame
+him with the same imposing close fight-poster energy as Image 3: broad shoulders, strong
+three-quarter angle, tight crop, and a slight upward perspective. He remains composed,
+cold, and in control rather than shouting or throwing a punch.
 
-Background: Two or three flat charcoal, black, and muted green shapes with one solid gold
-spotlight shape. No gradients, glow, soft lighting, or rendered atmosphere.
+Background: Transparent outside the figure. If a backing shape is required during
+generation, use a removable flat chroma key only.
 
 JT Staten is the sole championship belt holder in every asset. The belt must be visible
 and clearly attached to him. Upper body to mid-thigh framing.
@@ -53,11 +64,12 @@ present on the referenced title belt.
 ## Negative Prompt
 
 ```
-invented face, altered identity, generic wrestler, generic championship belt, black belt
+clean mascot style, simple corporate vector art, uniform outline weight, minimal cartoon
+face, chibi proportions, smooth plastic skin, invented face, altered identity, generic
+wrestler, generic championship belt, black belt
 strap, oval center plate, missing purple strap, missing green side medallions, changed
 belt logo, multiple belts, belt held in hands, belt over shoulder, photorealistic,
-digital painting,
-gradients, blended shading, soft shadows, glow, rim light, detailed skin texture, blur,
+digital painting, gradients, blended shading, soft shadows, glow, photorealistic pores, blur,
 heroic pose, friendly expression, incorrect anatomy, extra limbs, deformed hands,
 watercolor, pastels, warm/orange background, unrelated text, unrelated logos, watermark
 ```
@@ -75,6 +87,7 @@ quality: high
 - **Save to**: `webimages/ui/jt-staten-portrait.png`
 - **Identity reference**: `webimages/TAS-JT-Staten.png`
 - **Belt reference**: `webimages/TITLE-BELT.png`
+- **Style reference**: `webimages/Last-Stand-Poster.png`
 - Export as PNG and pair with the mystery challenger portrait
 - Preserve the purple strap, angular center plate, City of Lights lettering, and green
   LoCo Pro side medallions
