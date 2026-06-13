@@ -809,4 +809,22 @@ body {
   .nav-brand {
     font-size: 0.9rem;
   }
+
+  .countdown {
+    flex-wrap: nowrap;
+  }
+
+  .cd-block {
+    padding: 0 2px;
+  }
+
+  .cd-num {
+    font-size: 8vw;
+    min-width: unset;
+  }
+
+  .cd-colon {
+    font-size: 6vw;
+    padding-bottom: 12px;
+  }
 }
