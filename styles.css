@@ -819,12 +819,14 @@ body {
   }
 
   .cd-num {
-    font-size: 8vw;
+    font-size: 11vw;
     min-width: unset;
   }
 
   .cd-colon {
-    font-size: 6vw;
-    padding-bottom: 12px;
+    font-size: 8vw;
+    align-self: center;
+    padding-bottom: 0;
+    margin-top: 0;
   }
 }
