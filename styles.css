@@ -814,19 +814,22 @@ body {
     flex-wrap: nowrap;
   }
 
+  .cd-colon {
+    display: none;
+  }
+
   .cd-block {
-    padding: 0 2px;
+    width: 25%;
+    padding: 0;
   }
 
   .cd-num {
-    font-size: 11vw;
+    font-size: 15vw;
     min-width: unset;
   }
 
-  .cd-colon {
-    font-size: 8vw;
-    align-self: center;
-    padding-bottom: 0;
-    margin-top: 0;
+  .cd-unit {
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
   }
 }
