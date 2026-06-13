@@ -811,21 +811,20 @@ body {
   }
 
   .countdown {
-    flex-wrap: wrap;
-    gap: 20px 0;
-  }
-
-  .cd-colon {
-    display: none;
+    flex-wrap: nowrap;
   }
 
   .cd-block {
-    width: 50%;
-    padding: 0;
+    padding: 0 2px;
   }
 
   .cd-num {
-    font-size: clamp(2.5rem, 10vw, 3rem);
+    font-size: 8vw;
     min-width: unset;
+  }
+
+  .cd-colon {
+    font-size: 6vw;
+    padding-bottom: 12px;
   }
 }
