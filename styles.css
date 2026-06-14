@@ -688,6 +688,12 @@ body {
   transform: translateY(-1px);
 }
 
+/* PayPal Hosted Button container (replaces .ticket-btn) */
+.paypal-button-container {
+  min-height: 45px;
+  margin-top: 4px;
+}
+
 /* ==============================
    FOOTER
    ============================== */
