@@ -185,7 +185,6 @@
             <li>Priority seating</li>
             <li>VIP designation</li>
           </ul>
-          <div id="paypal-container-vip" class="paypal-button-container"></div>
         </div>
 
         <div class="ticket-card">
@@ -201,7 +200,6 @@
             <li>General admission seating</li>
             <li>First-come seating</li>
           </ul>
-          <div id="paypal-container-ga" class="paypal-button-container"></div>
         </div>
 
         <div class="ticket-card">
@@ -217,9 +215,13 @@
             <li>General admission seating</li>
             <li>Child ticket</li>
           </ul>
-          <div id="paypal-container-child" class="paypal-button-container"></div>
         </div>
 
+      </div>
+
+      <div class="ticket-checkout">
+        <p class="ticket-checkout-label">Choose your ticket and check out securely</p>
+        <div id="paypal-container-SKNLMUP6SCEMJ" class="paypal-button-container"></div>
       </div>
     </div>
   </section>
@@ -237,14 +239,12 @@
 
   <script src="script.js?v=20260613a"></script>
 
-  <!-- Render PayPal Hosted Buttons into each ticket card -->
+  <!-- Render the PayPal Hosted Button -->
   <script>
     if (window.paypal && paypal.HostedButtons) {
-      ["paypal-container-vip", "paypal-container-ga", "paypal-container-child"].forEach(function (id) {
-        paypal.HostedButtons({
-          hostedButtonId: "SKNLMUP6SCEMJ",
-        }).render("#" + id);
-      });
+      paypal.HostedButtons({
+        hostedButtonId: "SKNLMUP6SCEMJ",
+      }).render("#paypal-container-SKNLMUP6SCEMJ");
     }
   </script>
 </body>
