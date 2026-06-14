@@ -688,6 +688,28 @@ body {
   transform: translateY(-1px);
 }
 
+/* PayPal Hosted Button checkout (replaces .ticket-btn links) */
+.ticket-checkout {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.ticket-checkout-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 20px;
+}
+
+.paypal-button-container {
+  max-width: 480px;
+  min-height: 45px;
+  margin: 0 auto;
+}
+
 /* ==============================
    FOOTER
    ============================== */

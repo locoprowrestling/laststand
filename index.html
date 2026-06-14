@@ -15,7 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260613a" />
+  <link rel="stylesheet" href="styles.css?v=20260614a" />
+  <!-- PayPal Hosted Buttons SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAtkqwZ4wJfJe8nkdVjMgCtDkWElg76SdS5T0Jj3ku6TtU1ll8Cd4Qrf6N7kfS5PgIxA6N_rLUPXjF9Ys&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 </head>
 <body>
 
@@ -183,7 +185,6 @@
             <li>Priority seating</li>
             <li>VIP designation</li>
           </ul>
-          <a href="https://www.paypal.com/ncp/payment/SKNLMUP6SCEMJ" class="ticket-btn ticket-btn-vip" target="_blank" rel="noopener noreferrer">Buy VIP Ticket</a>
         </div>
 
         <div class="ticket-card">
@@ -199,7 +200,6 @@
             <li>General admission seating</li>
             <li>First-come seating</li>
           </ul>
-          <a href="https://www.paypal.com/ncp/payment/SKNLMUP6SCEMJ" class="ticket-btn ticket-btn-ga" target="_blank" rel="noopener noreferrer">Buy GA Ticket</a>
         </div>
 
         <div class="ticket-card">
@@ -215,9 +215,13 @@
             <li>General admission seating</li>
             <li>Child ticket</li>
           </ul>
-          <a href="https://www.paypal.com/ncp/payment/SKNLMUP6SCEMJ" class="ticket-btn ticket-btn-ga" target="_blank" rel="noopener noreferrer">Buy Child Ticket</a>
         </div>
 
+      </div>
+
+      <div class="ticket-checkout">
+        <p class="ticket-checkout-label">Choose your ticket and check out securely</p>
+        <div id="paypal-container-SKNLMUP6SCEMJ" class="paypal-button-container"></div>
       </div>
     </div>
   </section>
@@ -234,5 +238,14 @@
   </footer>
 
   <script src="script.js?v=20260613a"></script>
+
+  <!-- Render the PayPal Hosted Button -->
+  <script>
+    if (window.paypal && paypal.HostedButtons) {
+      paypal.HostedButtons({
+        hostedButtonId: "SKNLMUP6SCEMJ",
+      }).render("#paypal-container-SKNLMUP6SCEMJ");
+    }
+  </script>
 </body>
 </html>
