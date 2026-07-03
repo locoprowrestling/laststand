@@ -22,6 +22,24 @@ scripts/
 CNAME           laststand.locopro.pw
 ```
 
+## Social Preview
+
+The page uses a poster-derived top crop for social previews:
+
+```text
+webimages/ui/poster-top-social.jpg
+```
+
+Use this crop when the desired unfurl should show the top of the event poster. Do not replace it
+with the alternate wide promotional card unless the preview is intentionally being redesigned.
+
+Verify metadata and the image response after changing preview art:
+
+```sh
+curl -s https://laststand.locopro.pw | rg 'og:image|twitter:image'
+curl -I https://laststand.locopro.pw/webimages/ui/poster-top-social.jpg
+```
+
 ## Running locally
 
 It's a static site — open `index.html` directly, or serve the folder:
