@@ -87,6 +87,8 @@ character illustration.
 - Build faces from sharp graphic planes: strong brow, nose, cheek, jaw, and neck shadows.
 - Use selective short black hatch marks, ink scratches, and sparse stipple specks on skin,
   hair, and clothing. Keep texture controlled rather than noisy.
+- Do not turn controlled comic texture into grit, grunge, splatter, dirty scratches,
+  distressed paint, or noisy print distress. These are not part of the Last Stand style.
 - Use small, hard warm highlights only where the poster style uses them.
 - Preserve clean separation between shapes and strong readability at thumbnail size.
 - Do not use gradients, airbrushing, painterly blending, soft shadows, photographic skin,
@@ -112,6 +114,9 @@ character illustration.
   poster-matched green, purple, gold, and black accents
 - **Championship continuity**: JT Staten is the only person shown with a championship
   belt. Never put a belt on the mystery challenger or any other figure.
+- **Belt accuracy**: For social promo composites, do not ask ImageGen to invent the
+  City of Lights championship belt. Generate JT with an unobstructed waist and no belt,
+  then composite the approved `webimages/TITLE-BELT.png` in the build step.
 
 ### Background Treatment
 

@@ -19,6 +19,8 @@ source-assets/  Original artwork
 prompts/        Image-generation prompts
 scripts/
   build_event_graphics.py   Regenerates/optimizes the event graphics
+  build_social_promos.sh    Builds TikTok/Instagram promo images from clean
+                            source plates with deterministic text and belt overlays
 CNAME           laststand.locopro.pw
 ```
 
@@ -38,6 +40,27 @@ Verify metadata and the image response after changing preview art:
 ```sh
 curl -s https://laststand.locopro.pw | rg 'og:image|twitter:image'
 curl -I https://laststand.locopro.pw/webimages/ui/poster-top-social.jpg
+```
+
+## TikTok / Instagram Promo Images
+
+Promotional post images live in:
+
+```text
+webimages/social/
+```
+
+Use `scripts/build_social_promos.sh` to rebuild the platform finals from source
+plates. The script adds crisp text and composites the approved
+`webimages/TITLE-BELT.png`; do not ask ImageGen to invent the City of Lights
+belt. Source plates should be clean current-style artwork with no generated
+text, no generated belt, no gritty/grungy/splatter texture, and an unobstructed
+JT waist for belt placement.
+
+For the full operating note and the 2026-07-06 friction log, see:
+
+```text
+../../.knowledgebase/projects/laststand/social-promo-image-workflow.md
 ```
 
 ## Running locally
