@@ -751,6 +751,21 @@ body {
   margin: 0 auto 24px;
 }
 
+.footer-press {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.footer-press a {
+  color: var(--white-dim);
+  text-decoration: underline;
+}
+
+.footer-press a:hover {
+  color: var(--green);
+}
+
 .footer-copy {
   font-size: 0.75rem;
   color: rgba(245, 240, 232, 0.35);
