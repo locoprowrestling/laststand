@@ -77,5 +77,8 @@ date if the event moves.
 
 ## Deploy
 
-GitHub Pages serves the repo root; `CNAME` points the site at
-`laststand.locopro.pw`. Push to the default branch to publish.
+`.github/workflows/deploy-pages.yml` builds the publish artifact via
+`scripts/build-pages.sh` (which excludes `scripts/`, `prompts/`,
+`source-assets/`, `archive/`, and other repo-only paths) and deploys it
+through GitHub Actions on every push to the default branch. `CNAME` points
+the site at `laststand.locopro.pw`.
