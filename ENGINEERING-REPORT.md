@@ -1,6 +1,6 @@
 # Agent-Ready Business Gateway engineering test
 
-Status: implemented locally; production deployment remains a separate authorized release action.
+Status: deployed and externally verified 2026-08-13.
 
 ## Before
 
@@ -23,7 +23,20 @@ Schema.org uses `startDate` for bell and `doorTime` for doors. Ticket options in
 | B | 6:05 PM | passed | passed | same source | 6:15 PM absent |
 | C | 6:00 PM | passed | passed | same source | 6:05 PM and 6:15 PM absent |
 
-The stage harness uses temporary source/output directories so the repository ends in the authoritative final state. No generated destination was manually edited during the sequence. Production deployment and public retrieval were not performed in this local implementation turn; therefore external verification is pending and must not be inferred from local tests.
+The stage harness uses temporary source/output directories so the repository ends in the authoritative final state. No generated destination was manually edited during the sequence.
+
+## Production deployment and external verification
+
+- Release commit: `ac9f962766e84d8e5420e5e295f0b4b2975f4284`
+- GitHub Actions run: `31717386022` — succeeded
+- Public base: `https://laststand.locopro.pw/`
+- Retrieval timestamp: `2026-08-13T15:48Z`
+- `/agent-capabilities.json`: HTTP 200; bell `6:00 PM`; date `2026-08-30`; venue `Longmont Elks Lodge #1055`.
+- `/event.jsonld`: HTTP 200; `startDate` `2026-08-30T18:00:00-06:00`.
+- `/` HTML: JSON-LD parsed successfully and reported the same start date; no `6:15 PM`, `6:05 PM`, `18:15:00`, or `18:05:00` value was present.
+- Public endpoint correctly reports ticket prices and inventory as `unknown — authoritative lookup required`.
+
+GitHub Actions emitted non-blocking workflow annotations for deprecated Node 20 action targets and an ignored `include-hidden-files` input. The deployment itself and public business-state readbacks succeeded.
 
 ## Final state
 
