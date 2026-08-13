@@ -46,6 +46,8 @@ const agent = {
   },
   ticketing: {
     purchase_url: event.ticketing.purchase_url,
+    authority: event.ticketing.capability_url,
+    disclosure: 'authoritative ticket capability is delegated to the ticketing system; this endpoint does not duplicate prices or availability',
     prices: 'unknown — authoritative lookup required',
     inventory: 'unknown — authoritative lookup required',
     authoritative_source: event.ticketing.authoritative_source

@@ -23,3 +23,4 @@ test('A, B, C propagation replaces superseded current values', () => {
   const c = stage('6:00 PM'); assert.equal(c.agent.next_event.bell, '6:00 PM'); assert.doesNotMatch(c.html, /18:15:00|18:05:00/);
 });
 test('generated outputs contain no fabricated ticket state', async () => { const { get_ticket_options } = await import('../mcp/business-gateway.mjs'); assert.equal(get_ticket_options().status, 'unknown'); });
+test('Last Stand delegates ticket authority without duplicating ticket facts', () => { const output = JSON.parse(fs.readFileSync(path.join(root, 'agent-capabilities.json'))); assert.equal(output.ticketing.authority, 'https://tickets.locopro.pw/agent-capabilities.json'); assert.equal(output.ticketing.prices, 'unknown — authoritative lookup required'); });

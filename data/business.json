@@ -25,6 +25,7 @@
       "discovery_enabled": true,
       "ticketing": {
         "authoritative_source": "external_ticketing_system",
+        "capability_url": "https://tickets.locopro.pw/agent-capabilities.json",
         "prices": "authoritative_source_required",
         "inventory": "authoritative_source_required",
         "purchase_url": "https://tickets.locopro.pw/"

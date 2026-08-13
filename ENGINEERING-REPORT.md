@@ -36,6 +36,15 @@ The stage harness uses temporary source/output directories so the repository end
 - `/` HTML: JSON-LD parsed successfully and reported the same start date; no `6:15 PM`, `6:05 PM`, `18:15:00`, or `18:05:00` value was present.
 - Public endpoint correctly reports ticket prices and inventory as `unknown — authoritative lookup required`.
 
+## Next-phase ticket authority
+
+The ticket site implementation is in `/Volumes/LaCie 2TB/locoprowrestling/tickets`.
+Prices are selected from active `ticket_tiers` rows. Availability is derived server-side from captured orders, fresh unpaid holds, and unclaimed VIP seats, then reduced to the public vocabulary `available`, `low_availability`, `almost_sold_out`, `sold_out`, or `unknown`. Exact counts, capacities, holds, orders, customers, and payment data are not serialized. Because the seeded event is currently inactive, its public availability must be `unknown`.
+
+Categorization thresholds are deployment environment configuration (`PUBLIC_AVAILABILITY_LOW_AT` and `PUBLIC_AVAILABILITY_ALMOST_SOLD_OUT_AT`) and are not emitted publicly. The route defaults to conservative values only as an implementation fallback; owner approval and production configuration are still required before claiming a threshold category. Purchase completion authority is PayPal capture plus a durable local order with `payment_status=captured`.
+
+Last Stand uses explicit authority delegation to `https://tickets.locopro.pw/agent-capabilities.json`; it does not duplicate ticket prices or availability.
+
 GitHub Actions emitted non-blocking workflow annotations for deprecated Node 20 action targets and an ignored `include-hidden-files` input. The deployment itself and public business-state readbacks succeeded.
 
 ## Final state

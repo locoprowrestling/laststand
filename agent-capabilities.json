@@ -1,11 +1,11 @@
 {
   "_generated": "GENERATED FILE — DO NOT EDIT DIRECTLY",
   "schema_version": "0.2",
-  "generated_at": "2026-08-13T15:48:16.646Z",
+  "generated_at": "2026-08-13T17:31:51.932Z",
   "freshness": {
     "status": "current",
     "source": "canonical_business_record",
-    "checked_at": "2026-08-13T15:48:16.646Z"
+    "checked_at": "2026-08-13T17:31:51.933Z"
   },
   "business": {
     "id": "loco-pro-wrestling-longmont",
@@ -62,6 +62,8 @@
   },
   "ticketing": {
     "purchase_url": "https://tickets.locopro.pw/",
+    "authority": "https://tickets.locopro.pw/agent-capabilities.json",
+    "disclosure": "authoritative ticket capability is delegated to the ticketing system; this endpoint does not duplicate prices or availability",
     "prices": "unknown — authoritative lookup required",
     "inventory": "unknown — authoritative lookup required",
     "authoritative_source": "external_ticketing_system"
