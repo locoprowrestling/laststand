@@ -33,6 +33,11 @@ rsync -a --delete \
   --exclude '_site/' \
   --exclude 'archive/' \
   --exclude 'scripts/' \
+  --exclude 'tests/' \
+  --exclude 'mcp/' \
+  --exclude 'data/' \
+  --exclude 'ENGINEERING-REPORT.md' \
+  --exclude 'DEPLOYMENT-BACKUP-ROLLBACK.md' \
   --exclude 'prompts/' \
   --exclude 'source-assets/' \
   --exclude '.gitignore' \

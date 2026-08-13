@@ -1,0 +1,69 @@
+{
+  "_generated": "GENERATED FILE — DO NOT EDIT DIRECTLY",
+  "schema_version": "0.2",
+  "generated_at": "2026-08-13T15:48:16.646Z",
+  "freshness": {
+    "status": "current",
+    "source": "canonical_business_record",
+    "checked_at": "2026-08-13T15:48:16.646Z"
+  },
+  "business": {
+    "id": "loco-pro-wrestling-longmont",
+    "name": "LoCo Pro Wrestling",
+    "home_market": "Longmont, Colorado"
+  },
+  "next_event": {
+    "id": "last-stand-2026-08-30",
+    "name": "Last Stand at the Lodge",
+    "date": "2026-08-30",
+    "doors": "5:00 PM",
+    "bell": "6:00 PM",
+    "timezone": "America/Denver",
+    "venue": {
+      "name": "Longmont Elks Lodge #1055",
+      "city": "Longmont",
+      "state": "CO",
+      "street_address": "306 Coffman St",
+      "postal_code": "80501",
+      "country": "US"
+    },
+    "provenance": {
+      "event": {
+        "source": "business_owner",
+        "status": "confirmed"
+      },
+      "venue": {
+        "source": "business_owner",
+        "status": "confirmed"
+      },
+      "doors": {
+        "source": "business_owner",
+        "status": "confirmed"
+      },
+      "bell": {
+        "source": "business_owner",
+        "status": "confirmed"
+      },
+      "ticketing": {
+        "prices": {
+          "source": "external_ticketing_system",
+          "status": "live_only"
+        },
+        "inventory": {
+          "source": "external_ticketing_system",
+          "status": "live_only"
+        },
+        "purchase_url": {
+          "source": "canonical_source",
+          "status": "handoff_only"
+        }
+      }
+    }
+  },
+  "ticketing": {
+    "purchase_url": "https://tickets.locopro.pw/",
+    "prices": "unknown — authoritative lookup required",
+    "inventory": "unknown — authoritative lookup required",
+    "authoritative_source": "external_ticketing_system"
+  }
+}
