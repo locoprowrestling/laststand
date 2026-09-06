@@ -1,9 +1,19 @@
 # The Last Stand at the Lodge
 
-Single-page event landing site for the LoCo Pro Wrestling show **"The Last Stand
-at the Lodge"** — August 30, 2026, 6:00 PM MT, at the Elks Lodge Ballroom. Hero
-with a live countdown, venue and about sections with scroll-reveal animations,
-and a tickets section. Static HTML/CSS/JS, no build step.
+Single-page site for the LoCo Pro Wrestling show **"The Last Stand at the
+Lodge"**, held August 30, 2026 at Longmont Elks Lodge #1055. Since the show,
+the page serves as the permanent results and historical event page: hero,
+the night in one line, a recap with the YouTube highlight embed, the full
+card with results, a "what changed" section, the room, a footage request,
+and the archived poster. The pre-show countdown and ticket sections were
+retired on 2026-09-05; their CSS is kept for history and for
+`thank-you.html`. Static HTML/CSS/JS, no build step.
+
+Canonical data for the event (status, venue, doors, bell, results link)
+lives in `data/business.json`; run `node scripts/generate-business-outputs.mjs`
+after editing it to regenerate `event.jsonld`, `agent-capabilities.json`,
+and the JSON-LD block in `index.html`. A `completed` event publishes as
+`last_event` with ticketing closed.
 
 Live at [laststand.locopro.pw](https://laststand.locopro.pw).
 

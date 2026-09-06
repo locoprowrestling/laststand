@@ -1,91 +1,43 @@
-// Countdown to August 30, 2026 6:00 PM Mountain Time
-const eventDate = new Date('2026-08-30T18:00:00-06:00');
-
-function pad(n) {
-  return String(n).padStart(2, '0');
-}
-
-function updateCountdown() {
-  const now = new Date();
-  const diff = eventDate - now;
-
-  if (diff <= 0) {
-    document.getElementById('cd-days').textContent = '00';
-    document.getElementById('cd-hours').textContent = '00';
-    document.getElementById('cd-mins').textContent = '00';
-    document.getElementById('cd-secs').textContent = '00';
-    return;
+// The Last Stand at the Lodge: results page behavior.
+// The pre-show countdown was retired after the event (August 30, 2026).
+(function () {
+  // Click-to-play YouTube facades. The poster image and the link work without
+  // JavaScript; with it, the first click swaps in the embed on demand.
+  var facades = document.querySelectorAll('.video-facade[data-video-id]');
+  for (var i = 0; i < facades.length; i += 1) {
+    facades[i].addEventListener('click', function (event) {
+      var facade = event.currentTarget;
+      var id = facade.getAttribute('data-video-id');
+      if (!id) return;
+      event.preventDefault();
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+      iframe.title = facade.getAttribute('aria-label') || 'YouTube video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      while (facade.firstChild) facade.removeChild(facade.firstChild);
+      facade.appendChild(iframe);
+      facade.classList.add('is-playing');
+    });
   }
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+  // Scroll reveal. Opt-in per element, skipped for reduced motion, and never
+  // required for the content to be visible.
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
 
-  document.getElementById('cd-days').textContent = pad(days);
-  document.getElementById('cd-hours').textContent = pad(hours);
-  document.getElementById('cd-mins').textContent = pad(mins);
-  document.getElementById('cd-secs').textContent = pad(secs);
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
-
-// Fade-in on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.venue-card, .ticket-card, .about-text, .about-badge').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.venue-card, .ticket-card, .about-text, .about-badge').forEach(el => {
-    el.classList.add = function(cls) {
-      HTMLElement.prototype.classList.add.call(this, cls);
-      if (cls === 'visible') {
-        this.style.opacity = '1';
-        this.style.transform = 'translateY(0)';
+  var targets = document.querySelectorAll('.result, .aftermath-card, .venue-card, .about-text, .about-media, .poster-figure');
+  var observer = new IntersectionObserver(function (entries) {
+    for (var j = 0; j < entries.length; j += 1) {
+      if (entries[j].isIntersecting) {
+        entries[j].target.classList.add('is-visible');
+        observer.unobserve(entries[j].target);
       }
-    };
-  });
-});
-
-// Simpler scroll reveal fallback
-const revealElements = document.querySelectorAll('.venue-card, .ticket-card, .about-text, .about-badge');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      revealObserver.unobserve(entry.target);
     }
-  });
-}, { threshold: 0.1 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-revealElements.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
-  revealObserver.observe(el);
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
+  for (var k = 0; k < targets.length; k += 1) {
+    targets[k].classList.add('reveal');
+    observer.observe(targets[k]);
+  }
+}());

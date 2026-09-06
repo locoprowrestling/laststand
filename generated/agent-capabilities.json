@@ -1,18 +1,19 @@
 {
   "_generated": "GENERATED FILE — DO NOT EDIT DIRECTLY",
   "schema_version": "0.2",
-  "generated_at": "2026-08-13T17:31:51.710Z",
+  "generated_at": "2026-09-06T00:06:22.511Z",
   "freshness": {
     "status": "current",
     "source": "canonical_business_record",
-    "checked_at": "2026-08-13T17:31:51.710Z"
+    "checked_at": "2026-09-06T00:06:22.512Z"
   },
   "business": {
     "id": "loco-pro-wrestling-longmont",
     "name": "LoCo Pro Wrestling",
     "home_market": "Longmont, Colorado"
   },
-  "next_event": {
+  "next_event": null,
+  "last_event": {
     "id": "last-stand-2026-08-30",
     "name": "Last Stand at the Lodge",
     "date": "2026-08-30",
@@ -27,6 +28,7 @@
       "postal_code": "80501",
       "country": "US"
     },
+    "status": "completed",
     "provenance": {
       "event": {
         "source": "business_owner",
@@ -58,10 +60,18 @@
           "status": "handoff_only"
         }
       }
+    },
+    "results": {
+      "url": "https://laststand.locopro.pw/#results",
+      "headline": "Zeak Gallent defeated JT Staten for the City of Lights Championship",
+      "published": "2026-08-31",
+      "source": "LoCo Pro Wrestling official post-show recap"
     }
   },
   "ticketing": {
-    "purchase_url": "https://tickets.locopro.pw/",
+    "status": "closed",
+    "reason": "the most recent event has concluded; no tickets are on sale for it",
+    "purchase_url": null,
     "authority": "https://tickets.locopro.pw/agent-capabilities.json",
     "disclosure": "authoritative ticket capability is delegated to the ticketing system; this endpoint does not duplicate prices or availability",
     "prices": "unknown — authoritative lookup required",

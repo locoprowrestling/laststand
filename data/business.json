@@ -21,8 +21,14 @@
       "doors": "5:00 PM",
       "bell": "6:00 PM",
       "timezone": "America/Denver",
-      "status": "upcoming",
+      "status": "completed",
       "discovery_enabled": true,
+      "results": {
+        "url": "https://laststand.locopro.pw/#results",
+        "headline": "Zeak Gallent defeated JT Staten for the City of Lights Championship",
+        "published": "2026-08-31",
+        "source": "LoCo Pro Wrestling official post-show recap"
+      },
       "ticketing": {
         "authoritative_source": "external_ticketing_system",
         "capability_url": "https://tickets.locopro.pw/agent-capabilities.json",

@@ -8,9 +8,17 @@ const sourcePath = process.env.LOCO_CANONICAL_SOURCE || path.join(root, 'data/bu
 const outputDir = process.env.LOCO_OUTPUT_DIR || path.join(root, 'generated');
 const htmlPath = process.env.LOCO_HTML_PATH || path.join(root, 'index.html');
 const source = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
-const event = source.events.filter((item) => item.discovery_enabled && item.status === 'upcoming')
+// Prefer the soonest upcoming event. When none is scheduled, publish the most
+// recently completed event as `last_event` so the machine-readable outputs
+// stop advertising a past show as upcoming.
+const discoverable = source.events.filter((item) => item.discovery_enabled);
+const upcoming = discoverable.filter((item) => item.status === 'upcoming')
   .sort((a, b) => a.date.localeCompare(b.date))[0];
-if (!event) throw new Error('No current upcoming event in canonical source');
+const completed = discoverable.filter((item) => item.status === 'completed')
+  .sort((a, b) => b.date.localeCompare(a.date))[0];
+const event = upcoming || completed;
+if (!event) throw new Error('No discoverable event in canonical source');
+const isUpcoming = Boolean(upcoming);
 
 const pad = (value) => String(value).padStart(2, '0');
 const time24 = (value) => {
@@ -34,17 +42,13 @@ const provenance = {
     purchase_url: { source: 'canonical_source', status: 'handoff_only' }
   }
 };
-const agent = {
-  _generated: generatedWarning,
-  schema_version: source.schema_version,
-  generated_at: new Date().toISOString(),
-  freshness: { status: 'current', source: 'canonical_business_record', checked_at: new Date().toISOString() },
-  business: source.business,
-  next_event: {
-    id: event.id, name: event.name, date: event.date, doors: event.doors, bell: event.bell,
-    timezone: event.timezone, venue: event.venue, provenance
-  },
-  ticketing: {
+const eventRecord = {
+  id: event.id, name: event.name, date: event.date, doors: event.doors, bell: event.bell,
+  timezone: event.timezone, venue: event.venue, status: event.status, provenance,
+  ...(event.results ? { results: event.results } : {})
+};
+const ticketing = isUpcoming
+  ? {
     purchase_url: event.ticketing.purchase_url,
     authority: event.ticketing.capability_url,
     disclosure: 'authoritative ticket capability is delegated to the ticketing system; this endpoint does not duplicate prices or availability',
@@ -52,10 +56,35 @@ const agent = {
     inventory: 'unknown — authoritative lookup required',
     authoritative_source: event.ticketing.authoritative_source
   }
+  : {
+    status: 'closed',
+    reason: 'the most recent event has concluded; no tickets are on sale for it',
+    purchase_url: null,
+    authority: event.ticketing.capability_url,
+    disclosure: 'authoritative ticket capability is delegated to the ticketing system; this endpoint does not duplicate prices or availability',
+    prices: 'unknown — authoritative lookup required',
+    inventory: 'unknown — authoritative lookup required',
+    authoritative_source: event.ticketing.authoritative_source
+  };
+const agent = {
+  _generated: generatedWarning,
+  schema_version: source.schema_version,
+  generated_at: new Date().toISOString(),
+  freshness: { status: 'current', source: 'canonical_business_record', checked_at: new Date().toISOString() },
+  business: source.business,
+  next_event: isUpcoming ? eventRecord : null,
+  last_event: isUpcoming ? null : eventRecord,
+  ticketing
 };
+const longDate = new Date(`${event.date}T12:00:00-06:00`).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/Denver'
+});
+const description = isUpcoming
+  ? `${source.business.name} presents ${event.name}, a live professional wrestling event.`
+  : `${source.business.name} presented ${event.name}, a live professional wrestling event held ${longDate} in ${event.venue.city}, ${event.venue.state}. Results are published on this page.`;
 const jsonld = {
   '@context': 'https://schema.org', '@type': 'Event', '@id': 'https://laststand.locopro.pw/#event',
-  name: event.name, description: `${source.business.name} presents ${event.name}, a live professional wrestling event.`,
+  name: event.name, description,
   url: 'https://laststand.locopro.pw/', mainEntityOfPage: 'https://laststand.locopro.pw/', startDate,
   doorTime: doorDate, eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
