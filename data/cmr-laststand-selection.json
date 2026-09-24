@@ -1,0 +1,39 @@
+{
+  "event": "Last Stand at the Lodge",
+  "date": "2026-08-30",
+  "coverage": "First-half selection",
+  "credit": "Photo by CMRice Photography",
+  "identitySource": "characterCreator/photo-tagger/tags.json",
+  "photos": [
+    {
+      "slug": "nicky-hyde",
+      "name": "Nicky Hyde",
+      "source": "795395015_1751176177013472_8300230650241917187_n.jpg"
+    },
+    {
+      "slug": "carter-cash",
+      "name": "Carter Cash",
+      "source": "795616709_1751175803680176_2513771087832071369_n.jpg"
+    },
+    {
+      "slug": "zeak-gallent",
+      "name": "Zeak Gallent",
+      "source": "815368070_1751174727013617_2244300471962568783_n.jpg"
+    },
+    {
+      "slug": "codah-alexander",
+      "name": "Codah Alexander",
+      "source": "820281295_1751176067013483_2618888613157736574_n.jpg"
+    },
+    {
+      "slug": "johnny-crash",
+      "name": "Johnny Crash",
+      "source": "816990296_1751175980346825_8404763693362992883_n.jpg"
+    },
+    {
+      "slug": "adam-starling",
+      "name": "Adam Starling",
+      "source": "796941796_1751173300347093_8566365179302924270_n.jpg"
+    }
+  ]
+}
