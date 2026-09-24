@@ -36,20 +36,20 @@ CNAME           laststand.locopro.pw
 
 ## Social Preview
 
-The page uses a poster-derived top crop for social previews:
+The page uses an official CMRice Photography photo for social previews:
 
 ```text
-webimages/ui/poster-top-social.jpg
+webimages/cmr/laststand-nicky-hyde.jpg
 ```
 
-Use this crop when the desired unfurl should show the top of the event poster. Do not replace it
-with the alternate wide promotional card unless the preview is intentionally being redesigned.
+This is the unchanged 2048 by 1365 Nicky Hyde photo selected by Aaron from the
+first-half Last Stand set. The retired AI poster must not be used as the thumbnail.
 
 Verify metadata and the image response after changing preview art:
 
 ```sh
 curl -s https://laststand.locopro.pw | rg 'og:image|twitter:image'
-curl -I https://laststand.locopro.pw/webimages/ui/poster-top-social.jpg
+curl -I https://laststand.locopro.pw/webimages/cmr/laststand-nicky-hyde.jpg
 ```
 
 ## TikTok / Instagram Promo Images
